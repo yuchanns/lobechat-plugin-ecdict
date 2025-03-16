@@ -3,7 +3,7 @@ import { LobeChatPluginManifest, PluginSchema } from "@lobehub/chat-plugin-sdk"
 // Replace the following with your plugin's information
 export const TITLE = "English-Chinese Dictionary"
 export const DESCRIPTION = "A plugin for LobeChat that provides English-Chinese dictionary lookup."
-const IDENTIFIER = "xyz.yuchanns.lobechat-ecdict"
+const IDENTIFIER = "lobechat-ecdict"
 const HOMEPAGE = "https://github.com/yuchanns/lobechat-plugin-ecdict"
 const AUTHOR = "yuchanns"
 const TAGS: string[] = ["dictionary", "english", "chinese"]
