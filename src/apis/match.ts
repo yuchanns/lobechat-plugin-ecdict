@@ -26,7 +26,7 @@ route.post("/*", async (c) => {
   const result = await c.env.db.select()
     .from(tableStarDict)
     .limit(5)
-    .where(and(gte(tableStarDict.sw, word), notLike(tableStarDict.word, `% %`)))
+    .where(and(gte(tableStarDict.sw, word), notLike(tableStarDict.word, "% %")))
     .orderBy(tableStarDict.sw, tableStarDict.word)
   if (!result) {
     throw new Error(`Word not found: ${word}`)

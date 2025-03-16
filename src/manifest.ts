@@ -1,7 +1,7 @@
 import { LobeChatPluginManifest, PluginSchema } from "@lobehub/chat-plugin-sdk"
 
 // Replace the following with your plugin's information
-export const TITLE = "LobeChat Plugin ECDICT"
+export const TITLE = "English-Chinese Dictionary"
 export const DESCRIPTION = "A plugin for LobeChat that provides English-Chinese dictionary lookup."
 const IDENTIFIER = "xyz.yuchanns.lobechat-ecdict"
 const HOMEPAGE = "https://github.com/yuchanns/lobechat-plugin-ecdict"
@@ -13,7 +13,7 @@ const SETTINGS: PluginSchema = {
   properties: {},
 }
 
-export const buildManifest = (url: URL, providers: APIProvider[]): LobeChatPluginManifest => {
+export const buildManifest = (url: URL, providers: APIProvider<Bindings>[]): LobeChatPluginManifest => {
   const { protocol, host } = url
   const AVATAR = `${protocol}//${host}/logo`
   return {
