@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@lobehub/chat-plugin-sdk": "^1.32.4",
+    "drizzle-orm": "^0.40.0",
     "hono": "^4.7.2"
   },
   "devDependencies": {
