@@ -1,7 +1,5 @@
-# 🤯 lobechat-plugin-template
-A Lobe-chat plugin template for Cloudflare Workers.
-
-![An example to provide the weather query service](https://github.com/user-attachments/assets/5c3a6d02-1d43-4510-a955-38575431b07b)
+# 🤯 lobechat-plugin-ecdict
+A plugin for LobeChat that provides English-Chinese dictionary lookup.
 
 ## ⚙️  Development
 
@@ -15,19 +13,20 @@ pnpm install
 pnpm dev
 ```
 
-This will start a local development server at `http://localhost:5173`.
+### Setup the database
 
-Add your plugins to the `src/apis` directory. Each plugin should be added to the `providers` array
-in `src/apis/index.ts`.
+```bash
+pnpm dev:setup
+```
 
-### Miscellaneous
-
-There is something you need to replace in files:
-
-- `wrangler.toml`: Replace `name` and `service` with your own values.
-- `src/manifest.ts`: Replace all the constants with your own values.
 
 ## 🌟 Deployment
+
+Before the first time of deploying, make sure to set the D1 database:
+
+```bash
+pnpm deploy:setup
+```
 
 This is a Cloudflare Worker project. Deploy it to Cloudflare Workers with just one command:
 

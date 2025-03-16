@@ -7,6 +7,7 @@ import { createErrorResponse, PluginErrorType } from "@lobehub/chat-plugin-sdk"
 import { buildManifest, DESCRIPTION, TITLE } from "./manifest"
 import { apiGateway } from "./gateway"
 import { loggingMiddleware } from "./middlewares"
+import { SVGICON } from "./svg"
 
 const app = new Hono<{ Bindings: Bindings }>().use(
   prettyJSON(),
@@ -38,6 +39,9 @@ app
   .get("/manifest.json", (c) => {
     const url = new URL(c.req.url)
     return c.json(buildManifest(url, providers))
+  })
+  .get("/logo", (c) => {
+    return c.html(SVGICON, 200, { "Content-Type": "image/svg+xml" })
   })
 
 const api = app.basePath("/api")

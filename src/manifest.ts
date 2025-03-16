@@ -1,14 +1,13 @@
 import { LobeChatPluginManifest, PluginSchema } from "@lobehub/chat-plugin-sdk"
 
 // Replace the following with your plugin's information
-export const TITLE = "LobeChat Plugin Template"
-export const DESCRIPTION = "A template for LobeChat plugins running on Cloudflare Workers."
-const IDENTIFIER = "lobechat-identifier"
-const HOMEPAGE = "https://github.com/yuchanns/lobechat-plugin-template"
+export const TITLE = "LobeChat Plugin ECDICT"
+export const DESCRIPTION = "A plugin for LobeChat that provides English-Chinese dictionary lookup."
+const IDENTIFIER = "xyz.yuchanns.lobechat-ecdict"
+const HOMEPAGE = "https://github.com/yuchanns/lobechat-plugin-ecdict"
 const AUTHOR = "yuchanns"
-const AVATAR = ""
-const TAGS: string[] = []
-const SYSTEM_ROLE = ""
+const TAGS: string[] = ["dictionary", "english", "chinese"]
+const SYSTEM_ROLE = "You are a helpful assistant that can search English phrases through tools and return the results in a structured format to help the user with their queries."
 const SETTINGS: PluginSchema = {
   type: "object",
   properties: {},
@@ -16,6 +15,7 @@ const SETTINGS: PluginSchema = {
 
 export const buildManifest = (url: URL, providers: APIProvider[]): LobeChatPluginManifest => {
   const { protocol, host } = url
+  const AVATAR = `${protocol}//${host}/logo`
   return {
     "$schema": "../node_modules/@lobehub/chat-plugin-sdk/schema.json",
     "version": "1",

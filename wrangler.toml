@@ -1,5 +1,5 @@
 #:schema node_modules/wrangler/config-schema.json
-name = "lobechat-plugin-template"
+name = "lobechat-plugin-ecdict"
 main = "dist/index.js"
 compatibility_date = "2025-02-26"
 compatibility_flags = ["nodejs_compat"]
@@ -7,8 +7,13 @@ minify = true
 logpush = false
 
 services = [
-  { binding = "MYSELF", service = "lobechat-plugin-template" }
+  { binding = "MYSELF", service = "lobechat-plugin-ecdict" }
 ]
 
 [observability]
 enabled = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "ecdict"
+database_id = "4defd423-3fcc-4f7b-b691-56cea5eccef3"

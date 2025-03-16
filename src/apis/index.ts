@@ -1,6 +1,5 @@
-import apiWeather from "./weather"
+import apiQuery from "./query"
 
 export const providers: APIProvider[] = [
-  apiWeather,
-  // ...add your providers here
+  apiQuery,
 ]
