@@ -3,6 +3,14 @@ A plugin for LobeChat that provides English-Chinese dictionary lookup.
 
 ## ⚙️  Development
 
+Recursively clone the repository with its submodules:
+
+```bash
+git clone git@github.com:yuchanns/lobechat-plugin-ecdict.git
+
+git submodule update --init --recursive
+```
+
 We use [pnpm](https://pnpm.io/) as package manager. Follow these simple steps to get started:
 
 ```bash
